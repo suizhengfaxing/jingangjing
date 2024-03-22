@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "./fonts/SIMKAI.css";
+@import "./fonts/MyFont-Regular.css";
 /* H5公共样式，用于所有H5开发页面*/
 html {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue",
@@ -16,6 +17,7 @@ body {
   font-size: 14px;
   background: #fff;
 }
+/* 注音 */
 ruby{
   display: inline-flex;
   flex-direction: column-reverse;
@@ -25,16 +27,17 @@ ruby{
 }
 rt {
 transform: scale(0.5,1);
-font-size: 0.85em;
+font-size: 0.8em;
 font-weight: normal;
 white-space: nowrap;
-color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
+color: rgba(100, 65, 37, 0.8); /* 使用半透明颜色值 */
+font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; 
 }
-
+/* 自定义字形 */
 .custom-font {
-  font-family: 'MyFont-Regular' /* 使用自定义字形，如果无法加载则回退到 Arial 或 sans-serif */
+  font-family: 'MyFont-Regular' /* 使用自定义字形 */
 }
-
+/* 括号 */
 .kuohao {
   width: 1em; font-family: "楷体", "楷体_GB2312", "SIMKAI";
 }
@@ -50,7 +53,7 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
   word-break:keep-all;  /* 不换行 */
   white-space:nowrap; /* 不换行 */
 }
-
+/* 一级标题 */
 .yiJiBiaoTi_p{
   line-height: 3em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-indent: 0em; text-align: center; visibility: visible; overflow-wrap: break-word !important;
 }
@@ -63,6 +66,12 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
   margin: 0px; padding: 0px; outline: 0px; max-width: 100%; color: rgb(114, 41, 41); font-size: 24px; visibility: visible; overflow-wrap: break-word !important;
 }
 
+.yiJiBiaoTi_buHuanHang{
+  word-break:keep-all;  /* 不换行 */
+  white-space:nowrap; /* 不换行 */
+  margin: 0px; padding: 0px; outline: 0px; max-width: 100%; color: rgb(114, 41, 41); font-size: 24px; visibility: visible; overflow-wrap: break-word !important;
+}
+/* 空行 */
 .kongHang_p{
   margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-align: center; overflow-wrap: break-word !important;
 }
@@ -70,7 +79,7 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
 .kongHang_br{
   margin: 0px; padding: 0px; outline: 0px; max-width: 100%; overflow-wrap: break-word !important;
 }
-
+/* 二级标题 */
 .erJiBiaoTi_p{
   line-height: 3em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-align: center; visibility: visible; overflow-wrap: break-word !important;
 }
@@ -78,31 +87,7 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
 .erJiBiaoTi_span{
   margin: 0px; padding: 0px; outline: 0px; max-width: 100%; color: rgb(114, 41, 41); font-size: 20px; visibility: visible; overflow-wrap: break-word !important;
 }
-
-.zhengWen{
-  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; overflow-wrap: break-word !important;
-}
-
-.zhengWen_JuZhong{
-  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-align: center; visibility: visible; overflow-wrap: break-word !important;
-}
-
-.zhengWen_XiaoZi{
-  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: "楷体", "楷体_GB2312", "SIMKAI", system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; overflow-wrap: break-word !important;
-}
-
-.zuoZhe{
-  margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: "楷体", "楷体_GB2312", "SIMKAI"; font-size: 16px; text-align: center; visibility: visible; overflow-wrap: break-word !important;
-}
-
-.kongHang_ZuoZhe{
-  margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; text-align: justify; visibility: visible; overflow-wrap: break-word !important;
-}
-
-.xiaoBiaoTi_YouDuiQi{
-  text-align:right; line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; overflow-wrap: break-word !important;
-}
-
+/* 三级标题 */
 .sanJiBiaoTi_ZuoDuiQi_p{
   line-height: 3em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-align: left; visibility: visible; overflow-wrap: break-word !important;
 }
@@ -115,6 +100,36 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
   margin: 0px; padding: 0px; outline: 0px; max-width: 100%; color: rgb(114, 41, 41); font-size: 18px; visibility: visible; overflow-wrap: break-word !important;
 }
 
+.sanJiBiaoTi_ZhuYin_span{
+  margin: 0px; padding: 0px; outline: 0px; max-width: 100%; 
+  color: rgba(114, 41, 41, 0.8); /* 使用半透明颜色值 */
+  font-size: 14px; visibility: visible; overflow-wrap: break-word !important;
+}
+/* 作者 */
+.zuoZhe{
+  margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: "楷体", "楷体_GB2312", "SIMKAI"; font-size: 16px; text-align: center; visibility: visible; overflow-wrap: break-word !important;
+}
+
+.kongHang_ZuoZhe{
+  margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; text-align: justify; visibility: visible; overflow-wrap: break-word !important;
+}
+/* 小标题 */
+.xiaoBiaoTi_YouDuiQi{
+  text-align:right; line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; overflow-wrap: break-word !important;
+}
+/* 正文 */
+.zhengWen{
+  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; overflow-wrap: break-word !important;
+}
+
+.zhengWen_JuZhong{
+  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; text-align: center; visibility: visible; overflow-wrap: break-word !important;
+}
+
+.zhengWen_XiaoZi{
+  line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: "楷体", "楷体_GB2312", "SIMKAI", system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; overflow-wrap: break-word !important;
+}
+
 .zhengWen_ShangYi{
   margin-top: -16px;line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; overflow-wrap: break-word !important;
 }
@@ -123,16 +138,16 @@ color: rgba(100, 65, 37, 0.97); /* 使用半透明颜色值 */
   margin-top: 16px;line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 16px; overflow-wrap: break-word !important;
 }
 
-.yiJiBiaoTi_buHuanHang{
-  word-break:keep-all;  /* 不换行 */
-  white-space:nowrap; /* 不换行 */
-  margin: 0px; padding: 0px; outline: 0px; max-width: 100%; color: rgb(114, 41, 41); font-size: 24px; visibility: visible; overflow-wrap: break-word !important;
+.zhengWen_ZhuYin_span{
+  margin: 0px; padding: 0px; outline: 0px; max-width: 100%; 
+  color: rgba(100, 65, 37, 0.8); /* 使用半透明颜色值 */
+  font-size: 12px; visibility: visible; overflow-wrap: break-word !important;
 }
-
+/* 脚注 */
 .jiaoZhu{
   line-height: 2em; margin-bottom: 0px; padding: 0px; outline: 0px; max-width: 100%; clear: both; min-height: 1em; color: rgb(100, 65, 37); font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Arial, sans-serif; font-size: 14px; overflow-wrap: break-word !important;
 }
-
+/* 页边距 */
 .container{
     padding:20px 20px 70px 20px!important;
 }
